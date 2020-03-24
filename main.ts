@@ -1,3 +1,7 @@
+function setze_Initialwerte () {
+    numPeople = 24
+    nteStatisch = 4
+}
 function timerImmun (sprite: Sprite) {
     setTimeout(function () {
     info.changeScoreBy(-1)
@@ -80,13 +84,16 @@ function setGesund (sprite: Sprite) {
 }
 let otherSpriteStatus = 0
 let spriteStatus = 0
+let nteStatisch = 0
 let iter = 0
 let status = 0
+let numPeople = 0
 let immun = 0
 let infiziert = 0
 let gesund = 0
 let personenArray: Sprite[] = []
 let personenStatusArray: number[] = []
+setze_Initialwerte()
 let spriteStatus2 = 0
 let neuePerson: Sprite = null
 personenStatusArray = []
@@ -94,8 +101,6 @@ personenArray = []
 gesund = 0
 infiziert = 1
 immun = 2
-let numPeople = 64
-let nteStatisch = 200
 for (let index = 0; index <= numPeople - 1; index++) {
     status = 0
     if (index % 6 == 0) {
